@@ -1,0 +1,153 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #f0f4f8);
+    color: #333;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #5f6368;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .item-list {
+    margin-bottom: 20px;
+  }
+  
+  .item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .item:hover {
+    background-color: #f9f9f9;
+    border-color: #8e44ad;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .page-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  .page-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    color: #999;
+    box-shadow: none;
+  }
+  
+  .page-button.active {
+    background-color: #8e44ad;
+    transform: scale(1.1);
+  }
+  
+  .page-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Pagination container at the bottom */
+  .pagination .page-button:first-child {
+    background-color: #2ecc71;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination .page-button:first-child:hover {
+    background-color: #27ae60;
+  }
+  
+  .pagination .page-button:last-child {
+    background-color: #f39c12;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination .page-button:last-child:hover {
+    background-color: #e67e22;
+  }
+  
+  .pagination .page-button:active {
+    transform: scale(0.95);
+  }
+  
+  .pagination .page-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Add a neat footer for the pagination */
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .pagination button:focus {
+    outline: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .page-button {
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pagination {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .page-button {
+      width: 100%;
+    }
+  }
+  
