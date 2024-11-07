@@ -1,20 +1,25 @@
 const itemsPerPage = 5;  // Number of items per page
-const items = Array.from({ length: 50 }, (_, i) => `Item ${i + 1}`);  // Example items (50 total)
+const items = Array.from({ length: 50 }, (_, i) => `Item ${i + 1}`);  //(50 total)
 
-// Get elements from the DOM
+// Getting  elements from the DOM
 const itemList = document.getElementById('item-list');
+//gets item-list
 const paginationContainer = document.getElementById('pagination');
+//gets div where page numbers are displayed
 
-// Total pages
+
+
+//gives total number of pages
+//total length/ no. of items on each page
 const totalPages = Math.ceil(items.length / itemsPerPage);
 
-// Function to display items for the current page
+//display page for clicked number
 function displayItems(page) {
   const start = (page - 1) * itemsPerPage;
   const end = page * itemsPerPage;
   const pageItems = items.slice(start, end);
 
-  // Clear the current list
+  // Clear the current list 
   itemList.innerHTML = '';
 
   // Append the items for the current page
@@ -38,7 +43,7 @@ function createPagination(page) {
 
   paginationContainer.appendChild(prevButton);
 
-  // Create page number buttons
+  // Create  buttons which displays buttons
   for (let i = 1; i <= totalPages; i++) {
     const pageButton = document.createElement('button');
     pageButton.textContent = i;
@@ -59,11 +64,11 @@ function createPagination(page) {
   paginationContainer.appendChild(nextButton);
 }
 
-// Function to navigate to a specific page
+// Function to navigate to page
 function goToPage(page) {
   displayItems(page);
   createPagination(page);
 }
 
-// Initialize the first page
+
 goToPage(1);
